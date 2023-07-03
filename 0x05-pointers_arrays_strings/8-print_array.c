@@ -1,23 +1,30 @@
-#include "main.h"
+/*
+ * File: 8-print_array.c
+ * Auth: Nadia
+ */
 
+#include "main.h"
 #include <stdio.h>
+
 /**
- * print_array - prints n times the elements of an array
- * @a: the pointer to the elements
- * @n: times to print elements
+ * print_array - Prints an inputted number of elements
+ *               of an array of integers.
+ * @a: The array of integers.
+ * @n: The number of elements to be printed.
  */
 void print_array(int *a, int n)
 {
-	int i;
+	int index;
 
-	for (i = 0 ; i < n ; i++)
+	for (index = 0; index < n; index++)
 	{
-		printf("%d", a[i]);
+		printf("%d", a[index]);
 
-		if (i < n - 1)
-		{
-			printf(", ");
-		}
+		if (index == n - 1)
+			continue;
+
+		printf(", ");
 	}
-	putchar('\n');
+
+	printf("\n");
 }

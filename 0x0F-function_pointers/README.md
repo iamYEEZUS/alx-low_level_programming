@@ -1,1 +1,0 @@
-functions and pointers coding is fun

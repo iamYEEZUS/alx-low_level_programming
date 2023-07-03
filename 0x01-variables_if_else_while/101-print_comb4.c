@@ -1,35 +1,44 @@
 #include <stdio.h>
-
 /**
- *  * main - Prints 3 combination of numbers
- *   *
- *    * Return: Always (Success)
- *     */
+ * main - A program that prints possible C of three digits
+ *
+ * Return: Always 0 (success)
+ */
+
 int main(void)
 {
-		int c, i, k;
+	int i = 0;
+	int j, k;
 
-			for (c = '0'; c <= '9'; c++)
+	while (i <= 9)
+	{
+		j = 0;
+		while (j <= 9)
+		{
+			k = 0;
+			while (k <= 9)
+			{
+				if (i != j &&
+				    i < j &&
+				    j != k &&
+				    j < k)
+				{
+					putchar(i + 48);
+					putchar(j + 48);
+					putchar(k + 48);
+
+					if (i + j + k != 24)
 					{
-								for (i = '0'; i <= '9'; i++)
-											{
-															for (k = '0'; k <= '9'; k++)
-																			{
-																								if (c < i && i < k)
-																													{
-																																			putchar(c);
-																																								putchar(i);
-																																													putchar(k);
-
-																																																		if (c != '7')
-																																																								{
-																																																															putchar(',');
-																																																																					putchar(' ');
-																																																																										}
-																																																						}
-																											}
-																	}
-									}
-				putchar('\n');
-					return (0);
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				k++;
+			}
+			j++;
+		}
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }

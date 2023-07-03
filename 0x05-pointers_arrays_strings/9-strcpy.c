@@ -1,3 +1,8 @@
+/*
+ * File: 9-strcpy.c
+ * Auth: Nadia Mohammed
+ */
+
 #include "main.h"
 
 /**
@@ -8,28 +13,15 @@
  *
  * Return: A pointer to the destination string @dest.
  */
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest,  char *src)
 {
-	int n = 0;
-	int i;
+	int index = 0;
 
-	while (src[n] != '\0')
+	while (src[index])
 	{
-		n++;
+		dest[index] = src[index];
+		index++;
 	}
 
-	i = 0;
-	while (i < n && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-
-	i = i;
-	while (i <= n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
 	return (dest);
 }

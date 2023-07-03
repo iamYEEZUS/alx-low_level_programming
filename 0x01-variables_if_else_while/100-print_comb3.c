@@ -1,31 +1,34 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
- *  * main - Entyr point
- *   * Description: prints two digits combination
- *    * Return: Always 0 (success)
- *     */
+ * main - Function that prints possible C of two digits
+ *
+ * Return: Always 0 (success)
+ */
+
 int main(void)
 {
-		int c, i;
+	int i = 0, j;
 
-			for (c = '0'; c <= '9'; c++)
-					{
-								for (i = '0'; i <= '9'; i++)
-											{
-															if (c < i)
-																			{
-																								putchar(c);
-																												putchar(i);
+	while (i <= 9)
+	{
+		j = 0;
+		while (j <= 9)
+		{
+			if (i != j && i < j)
+			{
+				putchar(i + 48);
+				putchar(j + 48);
 
-																																if (c != '8' || (c == '8' && i != '9'))
-																																					{
-																																											putchar(',');
-																																																putchar(' ');
-																																																				}
-																																			}
-																	}
-									}
-				putchar('\n');
-					return (0);
+				if (i + j != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			j++;
+		}
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }

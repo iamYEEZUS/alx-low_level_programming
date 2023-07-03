@@ -1,24 +1,28 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
- *  * main - Entry point
- *   * Description: Print base 16 numbers
- *    * Return: Always 0 (success)
- *     */
+ * main - A program that prints all the numbers of base sixteen in LC
+ *
+ * Return: Always 0 (success)
+ */
+
 int main(void)
 {
-		char c;
-			char d = '0';
+	char c;
 
-				while (d <= '9')
-						{
-									putchar(d);
-											d++;
-												}
-					for (c = 'a'; c <= 'f'; c++)
-							{
-										putchar(c);
-											}
-						putchar('\n');
-							return (0);
+	int d;
+
+	c = 'a';
+	d = 0;
+	while
+		(d < 10) {
+			putchar(d + '0');
+			d++;
+		}
+	while
+		(c <= 'f') {
+			putchar(c);
+			c++;
+		}
+	putchar('\n');
+	return (0);
 }
