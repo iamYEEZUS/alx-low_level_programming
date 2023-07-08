@@ -11,7 +11,7 @@
  */
 int coinConverter(int i)
 {
-	int count = 0;
+	int cents = 0;
 
 	while (i != 0)
 	{
@@ -33,10 +33,10 @@ int coinConverter(int i)
 		else
 			i -= 1;
 
-		count++;
+		cents++;
 	}
 
-	return (count);
+	return (cents);
 }
 
 /**
