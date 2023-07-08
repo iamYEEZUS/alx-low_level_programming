@@ -37,15 +37,15 @@ int _isnumber(char *s)
  */
 int main(int argc, char **argv)
 {
-	int j, e, coins, cents, d;
+	int j, ax, coins, cents, d;
 	int c[5] = {25, 10, 5, 2, 1};
 
-	e = 1, j = 0, coins = 0;
+	ax = 1, j = 0, coins = 0;
 	if (argc == 2)
 	{
 		if (_isnumber(argv[1]))
 		{
-			e = 0, cents = atoi(argv[1]);
+			ax = 0, cents = atoi(argv[1]);
 			if (cents >= 0)
 			{
 				while (cents != 0)
@@ -64,9 +64,9 @@ int main(int argc, char **argv)
 			}
 		}
 	}
-	if (ex == 0)
+	if (ax == 0)
 		printf("%i\n", coins);
 	else
 		printf("%s\n", "Error");
-	return (e);
+	return (ax);
 }
