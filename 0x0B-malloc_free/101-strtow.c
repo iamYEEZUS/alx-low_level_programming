@@ -1,9 +1,3 @@
-/**
- * 101-strtow.c
- * Description: Taking a string input, this program will ultimately split the string up such that
- * each word in the given string gets its own line by allocating the required amount of memory for each word
- * In the case where this is not possible, the memory that is already allocated gets freed up
- */
 
 #include "alx.h"
 #include <stdio.h>
