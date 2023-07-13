@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef ALX_H
+#define ALX_H
 
 int _putchar(char c);
 char *create_array(unsigned int size, char c);
